@@ -13,14 +13,14 @@ let contactList = [
       phone: "778-555-1234",
       address: "101 Main St, Anytown, USA",
       email: "chiefmedicalofficer@slack.example.com",
-    }, 
+    },
     {
       name: "Diana Prince",
       phone: "123-867-5309",
       address: "Warner Brothers Animation Lot",
       email: "wonderwoman@doc.example.com",
     }
-] 
+]
 
 function cleanUpIndex() {
   let elementArr = document.querySelectorAll(".main > *");
@@ -77,4 +77,9 @@ function addItemToMain(contactName) {
     let contactCard = `
     <a href="page3.html"><div class="contact"><p>${contactName}</p></div></a>`
     mainView.insertAdjacentHTML('beforeend', contactCard)
+}
+
+function cleanUpView() {
+  let elements = document.querySelectorAll(".main");
+  elements.forEach(ele => ele.remove());
 }

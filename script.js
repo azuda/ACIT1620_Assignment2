@@ -75,3 +75,8 @@ function addItemToMain(contactName) {
     <a href="page3.html"><div class="contact"><p>${contactName}</p></div></a>`
     mainView.insertAdjacentHTML('beforeend', contactCard)
 }
+
+function cleanUpView() {
+  let elements = document.querySelectorAll(".main");
+  elements.forEach(ele => ele.remove());
+}

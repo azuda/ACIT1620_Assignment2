@@ -15,3 +15,4 @@ Seven (7) js functions in script.js
 * Munib
 * Dennis
 * NaiYen
+* Uday

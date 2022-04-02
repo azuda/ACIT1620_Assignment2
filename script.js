@@ -3,6 +3,30 @@ function cleanUpIndex() {
   return elementArr.forEach((i) => i.remove());
 }
 
+
+function createSingleIndex() {
+  const singleContact = document.querySelectorAll(".contact");
+  singleContact.forEach((item) => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault;
+      var contact = {};
+      for (let i = 0; i < contactList.length; i++) {
+        if (contactList[i]["name"] == e.target.textContent) {
+          contact = contactList[i]
+        }
+      }
+      cleanUpIndex();
+      renderCreate(contact);
+      return `
+      <div class="contact">
+        <p>${contact["name"]}</p>
+      </div>
+    `;
+    });
+  });
+}
+
+
 function renderCreate(contact) {
   //create each element on page3.html and populate
   let divmain = document.createElement('div');

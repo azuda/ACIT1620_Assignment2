@@ -18,9 +18,22 @@ let contactList = [
       address: "Warner Brothers Animation Lot",
       email: "wonderwoman@doc.example.com",
     }
-]
+] 
 
 function cleanUpIndex() {
   let elementArr = document.querySelectorAll(".main > *");
   return elementArr.forEach((i) => i.remove());
+}
+
+function renderIndex(contactList) {
+    for(let i = 0; i < contactList.length; i++) {
+        addItemToMain(contactList[i]["name"])
+    }
+}
+
+function addItemToMain(contactName) {
+    mainView = document.querySelector('.main')
+    let contactCard = `
+    <a href="page3.html"><div class="contact"><p>${contactName}</p></div></a>`
+    mainView.insertAdjacentHTML('beforeend', contactCard)
 }

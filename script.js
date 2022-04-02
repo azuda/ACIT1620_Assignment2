@@ -25,6 +25,7 @@ function cleanUpIndex() {
     return elementArr.forEach((i) => i.remove());
 }
 
+
 function renderCreate(contact) {
     //create each element on page3.html and populate
     let divmain = document.createElement('div');

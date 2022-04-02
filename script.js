@@ -26,3 +26,7 @@ function cleanUpIndex() {
   let elementArr = document.querySelectorAll(".main > *");
   return elementArr.forEach((i) => i.remove());
 }
+
+function renderCreate() {
+  pass
+}

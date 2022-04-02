@@ -1,26 +1,27 @@
 //Array of contacts
 let contactList = [
     {
-      name: "Barry Allen",
-      phone: "+1 555 555-5555",
-      address: "123 front st, Unit #1, Dakota City",
-      email: "theflash@gmail.com",
+        name: "Barry Allen",
+        phone: "+1 555 555-5555",
+        address: "123 front st, Unit #1, Dakota City",
+        email: "theflash@gmail.com",
     },
     {
-      name: "Beverly Crusher",
-      phone: "778-555-1234",
-      address: "101 Main St, Anytown, USA",
-      email: "chiefmedicalofficer@slack.example.com",
-    }, 
+        name: "Beverly Crusher",
+        phone: "778-555-1234",
+        address: "101 Main St, Anytown, USA",
+        email: "chiefmedicalofficer@slack.example.com",
+    },
     {
-      name: "Diana Prince",
-      phone: "123-867-5309",
-      address: "Warner Brothers Animation Lot",
-      email: "wonderwoman@doc.example.com",
+        name: "Diana Prince",
+        phone: "123-867-5309",
+        address: "Warner Brothers Animation Lot",
+        email: "wonderwoman@doc.example.com",
     }
 ]
 
-function cleanUpIndex() {
+
+
   let elementArr = document.querySelectorAll(".main > *");
   return elementArr.forEach((i) => i.remove());
 }
@@ -62,4 +63,27 @@ function renderCreate(contact) {
   divcinfo.appendChild(divcbutt);
 
   //renderCreate(contactList[0])
+}
+
+function cleanUpIndex() {
+    let elementArr = document.querySelectorAll(".main > *");
+    return elementArr.forEach((i) => i.remove());
+}
+
+function renderIndex(contactList) {
+    for (let i = 0; i < contactList.length; i++) {
+        addItemToMain(contactList[i]["name"])
+    }
+}
+
+function addItemToMain(contactName) {
+    mainView = document.querySelector('.main')
+    let contactCard = `
+    <a href="page3.html"><div class="contact"><p>${contactName}</p></div></a>`
+    mainView.insertAdjacentHTML('beforeend', contactCard)
+}
+
+function cleanUpView() {
+    let elements = document.querySelectorAll(".main");
+    elements.forEach(ele => ele.remove());
 }

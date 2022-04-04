@@ -27,7 +27,7 @@ function createSingleIndex() {
 }
 
 
-function renderCreate(contact) {
+function renderView(contact) {
   //create each element on page3.html and populate
   let divmain = document.createElement('div');
   divmain.setAttribute('class', 'main');
@@ -63,7 +63,7 @@ function renderCreate(contact) {
   divcbutt.innerHTML = '<button class="button edit" value="Edit">Edit</button><button class="button close" value="Close">Close</button>';
   divcinfo.appendChild(divcbutt);
 
-  //renderCreate(contactList[0])
+  //renderView(contactList[0])
 }
 
 function renderIndex(contactList) {

@@ -4,6 +4,8 @@ function cleanUpIndex() {
 }
 
 
+
+
 function createSingleIndex() {
   const singleContact = document.querySelectorAll(".contact");
   singleContact.forEach((item) => {
@@ -83,6 +85,13 @@ function cleanUpView() {
   let elements = document.querySelectorAll(".main");
   elements.forEach(ele => ele.remove());
 }
+
+/* Clean Create Page */
+function cleanUpCreate() {
+  let elements = document.querySelectorAll(".main > *");
+  return elements.forEach((i) => i.remove());
+}
+
 
 
 /* All our code above this line */

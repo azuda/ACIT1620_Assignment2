@@ -56,7 +56,7 @@ function cleanUpIndex() {
 
 
 
-//She works just like in the video 
+
 function createSingleIndex(Contact) {
 
     let a = document.createElement('a')
@@ -74,7 +74,7 @@ function createSingleIndex(Contact) {
     
     
     return a
-
+    //createSingleIndex(contactList[0])
 }
 
 

@@ -56,28 +56,27 @@ function cleanUpIndex() {
 
 
 
+//She works just like in the video 
+function createSingleIndex(Contact) {
 
-function createSingleIndex() {
-  const singleContact = document.querySelectorAll(".contact");
-  singleContact.forEach((item) => {
-    item.addEventListener('click', (e) => {
-      e.preventDefault;
-      var contact = {};
-      for (let i = 0; i < contactList.length; i++) {
-        if (contactList[i]["name"] == e.target.textContent) {
-          contact = contactList[i]
-        }
-      }
-      cleanUpIndex();
-      renderCreate(contact);
-      return `
-      <div class="contact">
-        <p>${contact["name"]}</p>
-      </div>
-    `;
-    });
-  });
+    let a = document.createElement('a')
+        a.href ="page3.html"
+    
+    let div = document.createElement('div')
+        div.classList.add("contact")
+        
+
+    let p = document.createElement('p')
+        p.textContent = Contact.name
+     
+        a.append(div)
+        div.append(p)
+    
+    
+    return a
+
 }
+
 
 
 function renderView(contact) {
